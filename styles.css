@@ -201,7 +201,7 @@ h3 {
 .case-examples-grid {
   display: grid;
   gap: var(--space-md);
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
 .case-example {
@@ -221,6 +221,13 @@ h3 {
   font-weight: 700;
   color: var(--muted);
   margin: 0;
+}
+
+.case-example h3,
+.card h3 {
+  word-break: break-word;
+  hyphens: auto;
+  line-height: 1.2;
 }
 
 .cases-intro {
