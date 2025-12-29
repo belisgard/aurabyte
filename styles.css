@@ -4,7 +4,7 @@
   --muted: #5a5a5a;
   --border: #dcdcdc;
   --accent: #0f0f0f;
-  --container: min(1100px, 100%);
+  --container: min(1180px, 100%);
   --radius: 10px;
   --space-xs: clamp(8px, 1vw, 12px);
   --space-sm: clamp(12px, 1.5vw, 16px);
@@ -283,9 +283,9 @@ h3 {
 
 .header-inner {
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: auto minmax(0, 1fr) auto;
   align-items: center;
-  gap: var(--space-md);
+  gap: var(--space-sm);
   padding: var(--space-sm) var(--space-md);
 }
 
@@ -298,11 +298,13 @@ h3 {
 
 .nav {
   display: flex;
-  gap: var(--space-md);
+  gap: var(--space-sm);
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   font-size: var(--font-size-small);
+  min-width: 0;
+  overflow-x: auto;
 }
 
 .nav a {
@@ -316,6 +318,8 @@ h3 {
 
 .cta-header {
   justify-self: end;
+  padding-inline: 16px;
+  white-space: nowrap;
 }
 
 .nav-toggle {
