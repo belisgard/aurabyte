@@ -336,6 +336,18 @@ h3 {
   padding: 0;
 }
 
+.card-list ul {
+  list-style: disc;
+  padding-left: 18px;
+  margin: 6px 0 0;
+  display: grid;
+  gap: 8px;
+}
+
+.card-list li {
+  margin: 0;
+}
+
 .card-list .label {
   font-weight: 600;
 }
