@@ -271,7 +271,7 @@ h3 {
   gap: 6px;
   padding: 10px 18px;
   font-weight: 600;
-  border-radius: 999px;
+  border-radius: 0;
   border: 1px solid var(--accent);
   transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
 }
@@ -288,6 +288,9 @@ h3 {
 
 .btn:hover {
   transform: translateY(-1px);
+  background: var(--bg);
+  color: var(--accent);
+  border-color: var(--accent);
 }
 
 .btn:active {
@@ -398,6 +401,13 @@ h3 {
   line-height: 1.2;
 }
 
+.case-example h3 {
+  word-break: normal;
+  hyphens: manual;
+  white-space: normal;
+  max-width: 24ch;
+}
+
 .cases-intro {
   display: grid;
   gap: var(--space-sm);
@@ -436,6 +446,9 @@ h3 {
   margin: 0;
   font-size: var(--font-size-small);
   color: rgba(255, 255, 255, 0.72);
+  min-height: 28px;
+  display: flex;
+  align-items: center;
 }
 
 .case-card .label {
@@ -449,6 +462,8 @@ h3 {
 
 .case-card h3 {
   margin-bottom: 0;
+  line-height: 1.1;
+  min-height: calc(var(--font-size-h3) * 2.2);
 }
 
 .case-card .card-list {
@@ -522,6 +537,12 @@ h3 {
   padding: 6px 0;
   font-weight: 500;
   white-space: nowrap;
+}
+
+.nav-mobile-note {
+  display: none;
+  font-weight: 600;
+  font-size: var(--font-size-small);
 }
 
 .cta-header {
@@ -801,30 +822,21 @@ h3 {
   }
 
   .nav-toggle {
-    display: inline-flex;
+    display: none;
   }
 
   .nav {
-    position: absolute;
-    top: 64px;
-    left: 0;
-    right: 0;
-    background: #fff;
-    border-bottom: 1px solid var(--border);
-    padding: var(--space-sm) var(--space-md);
-    display: none;
-    flex-direction: column;
-    gap: var(--space-sm);
-  }
-
-  .nav.open {
-    display: flex;
+    display: none !important;
   }
 
   .cta-header {
     display: inline-flex;
     padding: 8px 14px;
     font-size: var(--font-size-small);
+  }
+
+  .nav-mobile-note {
+    display: block;
   }
 
   .hero-grid {
